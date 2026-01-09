@@ -3,72 +3,298 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Emma Cunningham | Privacy & AI Research</title>
+  <title>Emma Cunningham | Research Portfolio</title>
 
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #111;
+    :root{
+      --bg: #0b0f17;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.09);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --line: rgba(255,255,255,.12);
+      --accent: #6ee7ff;
+      --accent2:#a78bfa;
     }
-    h1, h2 {
-      line-height: 1.3;
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(900px 600px at 15% 10%, rgba(110,231,255,.18), transparent 60%),
+                  radial-gradient(900px 600px at 85% 15%, rgba(167,139,250,.18), transparent 60%),
+                  var(--bg);
     }
-    a {
-      color: #0056d6;
-      text-decoration: none;
+
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 42px 18px 70px;
     }
-    a:hover {
-      text-decoration: underline;
+
+    /* Top hero */
+    .hero{
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
     }
-    .section {
-      margin-bottom: 48px;
+    .name{
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: .4px;
+      margin: 0 0 8px;
+    }
+    .tagline{
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.45;
+    }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 16px;
+    }
+    .chip{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Buttons */
+    .btns{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top: 18px;
+    }
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      text-decoration:none;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    a.btn.primary{
+      background: linear-gradient(90deg, rgba(110,231,255,.22), rgba(167,139,250,.20));
+      border-color: rgba(255,255,255,.18);
+    }
+    a.btn:hover{
+      background: rgba(255,255,255,.10);
+    }
+
+    /* Sections */
+    .section{
+      margin-top: 26px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: 18px;
+      padding: 22px;
+    }
+    h2{
+      margin: 0 0 14px;
+      font-size: 18px;
+      letter-spacing: .2px;
+    }
+    p{
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* Cards */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 820px){
+      .grid.two{ grid-template-columns: 1fr 1fr; }
+    }
+    .card{
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .card:hover{
+      background: var(--card2);
+    }
+    .title{
+      margin: 0 0 6px;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+    .meta{
+      margin: 0 0 10px;
+      color: rgba(255,255,255,.68);
+      font-size: 13px;
+    }
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 10px;
+    }
+    .links a{
+      color: var(--accent);
+      text-decoration:none;
+      font-weight: 700;
+      font-size: 13px;
+      border-bottom: 1px dashed rgba(110,231,255,.35);
+      padding-bottom: 2px;
+    }
+    .links a.secondary{
+      color: var(--accent2);
+      border-bottom-color: rgba(167,139,250,.35);
+    }
+
+    footer{
+      margin-top: 18px;
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+      text-align:center;
     }
   </style>
 </head>
 
 <body>
+  <div class="wrap">
 
-  <h1>Emma Cunningham</h1>
-  <p><strong>Privacy Engineering • AI Security • Applied ML Research</strong></p>
+    <div class="hero">
+      <h1 class="name">Emma Cunningham</h1>
+      <p class="tagline">
+        Applied AI • Data Analytics • Research<br/>
+        Cybersecurity Analytics &amp; Operations (Penn State Beaver, May 2026)
+      </p>
 
-  <div class="section">
-    <h2>About</h2>
-    <p>
-      Four-time published author focused on privacy-preserving systems,
-      blockchain-based access control, and applied AI research.
-    </p>
+      <div class="chips">
+        <span class="chip">4 publications</span>
+        <span class="chip">Digital Twins</span>
+        <span class="chip">Blockchain Systems</span>
+        <span class="chip">AI Agent (Discrete Math)</span>
+        <span class="chip">Mobile Apps (iOS/Android)</span>
+      </div>
+
+      <div class="btns">
+        <!-- Update this CV filename if you change it -->
+        <a class="btn primary" href="Emma CunninghamOfficial_CV.pdf">Download CV</a>
+        <a class="btn" href="https://github.com/emmaroe33" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:emmaroe33@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/emma-cunningham-0a6505293/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>About</h2>
+      <p>
+        Four-time published researcher with experience in applied machine learning, data-driven digital twins,
+        and blockchain-based system design. I build practical tools and models and document results clearly for real-world use.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Publications</h2>
+
+      <div class="grid">
+        <div class="card">
+          <div class="title">A Data-Driven Digital Twin for Student Engagement Prediction in e-Learning Systems</div>
+          <div class="meta">IEEE World AI IoT Congress (AIIoT), 2025 • Kumi, Lomotey, Ray, Cunningham, Milovich, Deters</div>
+          <p>
+            Digital twin framework for student engagement prediction using synthetic data while preserving missingness patterns.
+          </p>
+          <div class="links">
+            <!-- This matches your uploaded filename in the repo -->
+            <a href="A_Data-Driven_Digital_Twin_for_Student_Engagement_Prediction_in_e-Learning_Systems.pdf">PDF</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="title">Explainable Data-Driven Digital Twin for Stress Management</div>
+          <div class="meta">Kumi, Lomotey, Ray, Cunningham, Deters</div>
+          <p>
+            Digital twin approach for stress management with explainability to support transparent interpretation of model outputs.
+          </p>
+          <div class="links">
+            <!-- This matches your uploaded filename in the repo -->
+            <a href="DT_StressManagement.pdf">PDF</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="title">Blockchain-Based Access and Usage Control of Government, Educational, and Electronic Health Record Systems</div>
+          <div class="meta">Cunningham et al., 2025</div>
+          <p>
+            Research on blockchain-based architectures for access and usage control across sensitive data domains.
+          </p>
+          <div class="links">
+            <!-- Upload your blockchain paper PDF, then replace the link below -->
+            <a class="secondary" href="#">PDF (upload and link)</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="title">Advances in Social Networks Analysis and Mining — ASONAM 2025 Proceedings</div>
+          <div class="meta">Contributor credit</div>
+          <p>
+            Credited contributor in the ASONAM 2025 proceedings volume.
+          </p>
+          <div class="links">
+            <!-- Option A: upload screenshot image/pdf and link it
+                 Option B: link to the Google Books page -->
+            <a class="secondary" href="#">Evidence / Screenshot (add link)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+
+      <div class="grid two">
+        <div class="card">
+          <div class="title">AI Agent for Discrete Mathematics</div>
+          <div class="meta">Independent Project • Visual Studio Code + OpenAI</div>
+          <p>
+            Built an AI agent trained only on professor-provided course materials to generate aligned practice problems and
+            explanations for labs and discrete math topics.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="title">Mobile Health App (iOS &amp; Android)</div>
+          <div class="meta">React Native • UI + Charting</div>
+          <p>
+            Developed a cross-platform app with UI design and interactive charting. Worked with de-identified survey and
+            consumer wearable metrics (activity, heart rate, sleep) from Ghana and the United States.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="y"></span> Emma Cunningham • Built with GitHub Pages
+    </footer>
+
   </div>
 
-  <div class="section">
-    <h2>Publications</h2>
-    <p>
-      <strong>Blockchain-Based Access and Usage Control of Government, Educational,
-      and Electronic Health Record Systems</strong><br/>
-      Emma Cunningham et al., 2025
-      <a href="blockchain_access_control.pdf">PDF</a>
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Projects</h2>
-    <p>
-      <strong>Privacy-Aware AI Agent for Discrete Mathematics (In Progress)</strong><br/>
-      Designing and evaluating an AI agent focused on structured reasoning,
-      privacy-aware data handling, and leakage risk analysis.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Links</h2>
-    <ul>
-      <li><a href="https://github.com/emmaroe33">GitHub</a></li>
-      <li><a href="Emma CunninghamOffical_CV.pdf">CV (PDF)</a></li>
-    </ul>
-  </div>
-
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
