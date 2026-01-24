@@ -390,22 +390,37 @@ body::after{
   font-size: 13px;
 }
 .profile-pic{
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-.name-row{
+.hero-top{
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
+  gap: 32px;
 }
+.profile-pic{
+  background: linear-gradient(145deg, rgba(255,255,255,0.25), rgba(255,255,255,0));
+}
+.profile-pic{
+  transform: translateY(-6px);
+}
+@media (max-width: 768px){
+.hero-top{
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.name{
-  margin: 0;
+  .profile-pic{
+    width: 110px;
+    height: 110px;
+    margin-top: 16px;
+  }
 }
 
 
@@ -419,18 +434,16 @@ body::after{
     <div class="hero">
 
   <div class="hero-top">
-  <div class="name-row">
+  <div class="hero-text">
     <h1 class="name">Emma Cunningham</h1>
-    <img src="assets/img/profile.png" alt="Emma Cunningham headshot" class="profile-pic">
+    <p class="tagline">
+      Applied Research • Data Analytics • AI <br/>
+      Cybersecurity Analytics &amp; Operations (Penn State, May 2026)
+    </p>
   </div>
 
-  <p class="tagline">
-    Applied Research • Data Analytics • AI <br/>
-    Cybersecurity Analytics &amp; Operations (Penn State, May 2026)
-  </p>
+  <img src="assets/img/profile.png" alt="Emma Cunningham headshot" class="profile-pic">
 </div>
-
-
   <!-- remove this entire block if you don’t want the bubble -->
   <!--
   <div class="chips">
