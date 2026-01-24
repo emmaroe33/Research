@@ -389,6 +389,16 @@ body::after{
   background: rgba(255,255,255,.05);
   font-size: 13px;
 }
+.profile-pic{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;      /* keeps it nicely cropped */
+  display: block;
+  border: 3px solid #fff; /* optional */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* optional */
+}
+
 
 
 </style>
@@ -401,7 +411,7 @@ body::after{
     <div class="hero">
 
   <div class="hero-top">
-    <img src="Screeenshot 2026-01-24 103717.png" alt="Emma Cunningham headshot" class="profile-pic">
+    <img src="Screeenshot 2026-01-24 103717.png" class="profile-pic">
     <h1 class="name">Emma Cunningham</h1> 
     <p class="tagline">
       Applied Research • Data Analytics • AI <br/>
